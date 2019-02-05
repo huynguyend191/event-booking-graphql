@@ -6,7 +6,7 @@ const { transformBooking, transformEvent } = require('./merge');
 
 module.exports = {
 
-  bookings: async (req) => {
+  bookings: async (args, req) => {
     if (!req.isAuth) {
       throw new Error('Unauthenticated');
     }
